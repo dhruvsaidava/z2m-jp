@@ -1,0 +1,30 @@
+# Enable Rewrite Engine
+RewriteEngine On
+RewriteBase /z2m-jp/
+
+# Redirect index.php to root docs
+RewriteRule ^index\.php$ docs.php [L,R=301]
+
+# Handle docs.php directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Clean URLs for documentation pages
+# /about -> docs.php?page=about
+RewriteRule ^(home|about|flow|software|learning|arduino|3dprinter|links|facilitator|contact)/?$ docs.php?page=$1 [L,QSA]
+
+# Default route - redirect root to home
+RewriteRule ^$ docs.php?page=home [L,QSA]
+
+# Prevent access to markdown files directly
+<FilesMatch "\.(md)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Prevent access to parser
+<Files "markdown-parser.php">
+    Order Allow,Deny
+    Deny from all
+</Files>
+

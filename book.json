@@ -1,0 +1,32 @@
+{
+  "title": "Zero2Maker Japan - Workshop Guide",
+  "description": "2-Day Workshop Guide for Zero2Maker Japan Program",
+  "author": "Zero2Maker Team",
+  "language": "en",
+  "gitbook": ">=3.2.0",
+  "structure": {
+    "readme": "README.md",
+    "summary": "SUMMARY.md"
+  },
+  "plugins": [
+    "theme-default",
+    "search",
+    "fontsettings",
+    "sharing"
+  ],
+  "pluginsConfig": {
+    "sharing": {
+      "facebook": false,
+      "twitter": false,
+      "all": ["facebook", "twitter", "linkedin", "weibo"]
+    },
+    "theme-default": {
+      "showLevel": true
+    }
+  },
+  "variables": {
+    "contact": "japan@z2m.org",
+    "website": "https://z2m.org"
+  }
+}
+
