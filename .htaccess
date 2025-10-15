@@ -1,6 +1,6 @@
 # Enable Rewrite Engine
 RewriteEngine On
-RewriteBase /z2m-jp/
+RewriteBase /jp/
 
 # Redirect index.php to root docs
 RewriteRule ^index\.php$ docs.php [L,R=301]
